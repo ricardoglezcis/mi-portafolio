@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Ricardo González</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ricardo<span>&nbsp;González</span> Cisneros</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#fotografia">Fotografía</a></li>
+                <li><a href="#modelado-3d">Modelado 3D</a></li>
+                <li><a href="#vr">Realidad Virtual</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero animar-entrada">
+        <div class="hero-texto">
+            <h1>Hola, soy <span>Ricardo González Cisneros</span></h1>
+            <p>Me considero especialista en crear mundos visuales y experiencias inmersivas. Mi enfoque técnico y creativo me permite dominar el pipeline de producción: desde la captura de la composición perfecta en <span>fotografía</span>, pasando por el desarrollo meticuloso en <span>modelado 3D</span>, hasta el desarrollo de entornos interactivos en <span>realidad virtual</span>. Mi objetivo es fusionar arte y tecnología para crear experiencias memorables.</p>
+            
+            <p class="titulo-skills">Las herramientas que manejo:</p>
+            
+            <div class="skills-tags">
+                <span class="skill">Maya</span>
+                <span class="skill">Blender</span>
+                <span class="skill">3ds Max</span>
+                <span class="skill">Zbrush</span>
+                <span class="skill">Lightroom</span>
+                <span class="skill">THREE.js</span>
+                <span class="skill">Unity</span>
+                <span class="skill">Processing</span>
+                <span class="skill">Premiere</span>
+                <span class="skill">CapCut</span>
+                <span class="skill">Filmora</span>
+                <span class="skill">DaVinci Resolve</span>
+                <span class="skill">Snapseed</span>
+            </div>
+
+            <a href="#fotografia" class="btn">Ver mi trabajo</a>
+        </div>
+        <div class="hero-imagen-contenedor">
+            <img src="mi foto.jpg" alt="Mi foto" class="foto-difuminada">
+        </div>
+    </section>
+
+    <section id="fotografia" class="seccion-trabajo animar-entrada">
+        <h2>Mi visión en <span>Fotografía</span></h2>
+        <p class="descripcion-seccion">Explora un poco de mi portafolio fotográfico. <br>Pasa el cursor sobre las fotos para revelar su color<br>
+Deja presionado el clic en las flechas para navegar, haz clic en las fotos para verlas a detalle o revisa mi trabajo de edición interactivo abajo.</p>
+        
+        <div class="skills-tags centrado">
+            <span class="skill">Lightroom</span>
+            <span class="skill">Photoshop</span>
+            <span class="skill">Snapseed</span>
+        </div>
+        
+        <div class="contenedor-carrete-global">
+            <button class="flecha-carrete izq" 
+                onmousedown="iniciarCarrete('mi-carrete', -1)" onmouseup="detenerCarrete()" onmouseleave="detenerCarrete()"
+                ontouchstart="iniciarCarrete('mi-carrete', -1)" ontouchend="detenerCarrete()">&#10094;</button>
+            
+            <div class="carrete-fotografico" id="mi-carrete">
+                <img src="foto1.jpg" alt="Foto 1" onclick="abrirImagen(this.src)" loading="lazy">
+                <img src="foto2.jpg" alt="Foto 2" onclick="abrirImagen(this.src)" loading="lazy">
+                <img src="foto3.jpg" alt="Foto 3" onclick="abrirImagen(this.src)" loading="lazy">
+                <img src="foto4.jpg" alt="Foto 4" onclick="abrirImagen(this.src)" loading="lazy">
+                <img src="foto5.jpg" alt="Foto 5" onclick="abrirImagen(this.src)" loading="lazy">
+                <img src="foto6.jpg" alt="Foto 6" onclick="abrirImagen(this.src)" loading="lazy">
+                <img src="foto7.jpg" alt="Foto 7" onclick="abrirImagen(this.src)" loading="lazy">
+                <img src="foto8.jpg" alt="Foto 8" onclick="abrirImagen(this.src)" loading="lazy">
+                <img src="foto9.jpg" alt="Foto 9" onclick="abrirImagen(this.src)" loading="lazy">
+                <img src="foto10.jpg" alt="Foto 10" onclick="abrirImagen(this.src)" loading="lazy">
+            </div>
+            
+            <button class="flecha-carrete der" 
+                onmousedown="iniciarCarrete('mi-carrete', 1)" onmouseup="detenerCarrete()" onmouseleave="detenerCarrete()"
+                ontouchstart="iniciarCarrete('mi-carrete', 1)" ontouchend="detenerCarrete()">&#10095;</button>
+        </div>
+
+        <div class="comparacion-edicion animar-entrada">
+            <h3>Edición de Imágenes y Corrección de Color</h3>
+            <p class="sub-descripcion">Arrastra la barra central de izquierda a derecha para revelar la edición. Usa las flechas para ver más ejemplos.</p>
+            
+            <div class="carrusel-comparacion-edicion">
+                <button class="flecha-carrusel izq-carrusel" onclick="cambiarSlideEdicion(-1)">&#10094;</button>
+                <button class="flecha-carrusel der-carrusel" onclick="cambiarSlideEdicion(1)">&#10095;</button>
+
+                <div class="carrusel-wrapper-edicion">
+                    <div class="carrusel-pista-edicion">
+                        
+                        <div class="slide-edicion activo">
+                            <div class="b-a-slider-container">
+                                <img src="antes.jpg" alt="Antes" class="b-a-antes" loading="lazy">
+                                <img src="despues.jpg" alt="Después" class="b-a-despues" loading="lazy">
+                                
+                                <div class="slider-linea"></div>
+                                <div class="slider-boton"></div>
+                                
+                                <input type="range" min="0" max="100" value="50" class="b-a-manejador" oninput="controlarSliderBA(this)">
+                                
+                                <span class="etiqueta-ba label-antes">Antes</span>
+                                <span class="etiqueta-ba label-despues">Después</span>
+                            </div>
+                        </div>
+
+                        <div class="slide-edicion">
+                            <div class="b-a-slider-container">
+                                <img src="antes2.jpg" alt="Antes 2" class="b-a-antes" loading="lazy">
+                                <img src="despues2.jpg" alt="Después 2" class="b-a-despues" loading="lazy">
+                                <div class="slider-linea"></div>
+                                <div class="slider-boton"></div>
+                                <input type="range" min="0" max="100" value="50" class="b-a-manejador" oninput="controlarSliderBA(this)">
+                                <span class="etiqueta-ba label-antes">Antes</span>
+                                <span class="etiqueta-ba label-despues">Después</span>
+                            </div>
+                        </div>
+
+                        <div class="slide-edicion">
+                            <div class="b-a-slider-container">
+                                <img src="antes3.jpg" alt="Antes 3" class="b-a-antes" loading="lazy">
+                                <img src="despues3.jpg" alt="Después 3" class="b-a-despues" loading="lazy">
+                                <div class="slider-linea"></div>
+                                <div class="slider-boton"></div>
+                                <input type="range" min="0" max="100" value="50" class="b-a-manejador" oninput="controlarSliderBA(this)">
+                                <span class="etiqueta-ba label-antes">Antes</span>
+                                <span class="etiqueta-ba label-despues">Después</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modelado-3d" class="seccion-trabajo fondo-alterno animar-entrada">
+      <h2>Mi trabajo en <span>Modelado 3D</span></h2>
+        <p class="descripcion-seccion">Personajes orgánicos, objetos inorgánicos, animaciones, rigging y renders estáticos de alta calidad.</p>
+        
+        <div class="skills-tags centrado">
+            <span class="skill">Maya</span>
+            <span class="skill">Blender</span>
+            <span class="skill">3ds Max</span>
+            <span class="skill">ZBrush</span>
+            <span class="skill">THREE.js</span>
+        </div>
+        
+        <div class="bento-grid">
+            <div class="item-portfolio bento-grande">
+                <div class="contenedor-media video-contenedor">
+                    <video controls preload="metadata" poster="portadaaraña.jpg" onplay="ocultarOverlay(this)" onpause="mostrarOverlay(this)">
+                        <source src="araña.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-play">
+                        <span class="icono-play">▶</span>
+                        <p>Clic para reproducir</p>
+                    </div>
+                </div>
+                <div class="etiqueta-media">Animación de Araña | Rigging hecho en <span>Maya</span></div>
+            </div>  
+            <div class="item-portfolio bento-grande">
+                <div class="contenedor-media video-contenedor">
+                    <video controls preload="metadata" class="video-vertical" poster="portadarigging.png" onplay="ocultarOverlay(this)" onpause="mostrarOverlay(this)">
+                        <source src="riging.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-play">
+                        <span class="icono-play">▶</span>
+                        <p>Clic para reproducir</p>
+                    </div>
+                </div>
+                <div class="etiqueta-media">Muestra de Rigging en Modelo 3D elaborado en <span>Blender</span> | Animaciones hechas por Mixamo</div>
+            </div>
+            <div class="item-portfolio bento-pequeno">
+                <div class="contenedor-media img-click" onclick="abrirImagen('Modelado1.jpg')">
+                    <img src="Modelado1.jpg" alt="Render 3D" loading="lazy">
+                </div>
+                <div class="etiqueta-media">Render de Objetos elaborado en 3dsMax</div>
+            </div>
+            <div class="item-portfolio bento-pequeno">
+                <div class="contenedor-media img-click" onclick="abrirImagen('modelado2.jpg')">
+                    <img src="modelado2.jpg" alt="Detalle Texturas" loading="lazy">
+                </div>
+                <div class="etiqueta-media">Render de Modelado elaborado en Blender con texturas</div>
+            </div>
+            <div class="item-portfolio bento-pequeno">
+                <div class="contenedor-media img-click" onclick="abrirImagen('modelado3.jpg')">
+                    <img src="modelado3.jpg" alt="Render 3D" loading="lazy">
+                </div>
+                <div class="etiqueta-media">Render de Casillero elaborado en 3dsMax</div>
+            </div>
+            <div class="item-portfolio bento-pequeno">
+                <div class="contenedor-media img-click" onclick="abrirImagen('modelado4.jpg')">
+                    <img src="modelado4.jpg" alt="Render 3D" loading="lazy">
+                </div>
+                <div class="etiqueta-media">Render de escritorio elaborado en 3dsMax</div>
+            </div>
+            <div class="item-portfolio bento-pequeno">
+                <div class="contenedor-media img-click" onclick="abrirImagen('modelado5.jpg')">
+                    <img src="modelado5.jpg" alt="Render 3D" loading="lazy">
+                </div>
+                <div class="etiqueta-media">Render de Sofá elaborado en 3dsMax</div>
+            </div>
+            <div class="item-portfolio bento-pequeno">
+                <div class="contenedor-media img-click" onclick="abrirImagen('modelado6.jpg')">
+                    <img src="modelado6.jpg" alt="Render 3D" loading="lazy">
+                </div>
+                <div class="etiqueta-media">Texturizado de Modelo en Maya</div>
+            </div>
+            <div class="item-portfolio bento-pequeno">
+                <div class="contenedor-media img-click" onclick="abrirImagen('modelado7.jpg')">
+                    <img src="modelado7.jpg" alt="Render 3D" loading="lazy">
+                </div>
+                <div class="etiqueta-media">Mapa de UV elaborado en Photoshop</div>
+            </div>
+            <div class="item-portfolio bento-pequeno">
+                <div class="contenedor-media img-click" onclick="abrirImagen('modelado8.jpg')">
+                    <img src="modelado8.jpg" alt="Render 3D" loading="lazy">
+                </div>
+                <div class="etiqueta-media">Render de Rig de personaje en Maya</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vr" class="seccion-trabajo animar-entrada">
+        <h2>Inmersión en <span>Realidad Virtual</span></h2>
+        <p class="descripcion-seccion">Recorridos interactivos y entornos inmersivos.</p>
+        
+        <div class="skills-tags centrado">
+            <span class="skill">THREE.js</span>
+            <span class="skill">Unity</span>
+            <span class="skill">Oculus/Metaquest</span>
+        </div>
+        
+        <div class="layout-zigzag">
+            <div class="fila-zigzag">
+                <div class="texto-zigzag">
+                    <h3>Recorrido VR LowPoly</h3>
+                    <p>Mundo virtual desarrollado en motor Unity, permitiendo exploración libre a través de assets y modelados creados por mi.</p>
+                </div>
+                <div class="contenedor-media video-contenedor">
+                    <video controls preload="metadata" poster="portada_unity.jpg" onplay="ocultarOverlay(this)" onpause="mostrarOverlay(this)">
+                        <source src="unity.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-play">
+                        <span class="icono-play">▶</span>
+                        <p>Clic para reproducir</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fila-zigzag inversa">
+                <div class="texto-zigzag">
+                    <h3>Simple Single Player Game </h3>
+                    <p>Co-creador de un simple singleplayer game elaborado en Processing</p>
+                </div>
+                <div class="contenedor-media video-contenedor">
+                    <video controls preload="metadata" poster="videojuegosanta.gif" onplay="ocultarOverlay(this)" onpause="mostrarOverlay(this)">
+                        <source src="processing.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-play">
+                        <span class="icono-play">▶</span>
+                        <p>Clic para reproducir</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="proyectos-contribuciones animar-entrada">
+            <h3>Proyectos en los que he <span>participado y contribuido</span></h3>
+            <div class="lista-contribuciones">
+                <a href="https://ricardoglezcis.github.io/GCRRMNVBGEOfrenda/" target="_blank" class="btn-contribucion">Ofrenda "Por los que ya no están" elaborada en THREE.js</a>
+                <a href="https://lakb12.github.io/Recorrido-PointerLock-GCR-NRM/" target="_blank" class="btn-contribucion">Recorrido Navideño PointerLock elaborado en THREE.js </a>
+                <a href="https://www.youtube.com/@DualDorks-ICM" target="_blank" class="btn-contribucion">Co-creador de contenido en Youtube @DualDorks | Editor y Co-creador </a>
+            </div>
+        </div>
+
+        <div class="poster-ra animar-entrada">
+            <h3>Diseño y Desarrollo de <span>Realidad Aumentada</span></h3>
+            <p class="descripcion-seccion">Escanea el código QR con tu móvil para visualizar el objeto 3D en Realidad Aumentada directamente en tu espacio.</p>
+            
+            <div class="contenedor-poster">
+                <div class="item-portfolio">
+                    <div class="contenedor-media img-click poster-vertical" onclick="abrirImagen('poster.png')">
+                        <img src="poster.png" alt="Póster Nuka Cola con código QR para Realidad Aumentada" loading="lazy">
+                    </div>
+                    <div class="etiqueta-media">Póster Interactivo RA | <span>Escanea el QR</span></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="contacto">
+        <h2>¿Listo para tu próximo proyecto?</h2>
+        <p>Trabajemos juntos para llevar tus ideas a la siguiente dimensión.</p>
+        
+        <ul class="lista-redes">
+            <li><a href="https://instagram.com/richardglezcis" target="_blank">Instagram: richardglezcis</a></li>
+            <li><a href="https://www.linkedin.com/in/ricardo-gonz%C3%A1lez-42a0ab299/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@richibang0201/videos" target="_blank">Youtube</a></li>
+            <li><a href="mailto:ricardo.gonzalez.0201@outlook.com" class="btn-correo">Enviar Correo</a></li>
+        </ul>
+    </footer>
+
+    <div id="modal-foto" class="modal">
+        <span class="cerrar" onclick="cerrarImagen()">&times;</span>
+        <div class="modal-zoom-contenedor">
+            <img class="modal-contenido" id="imagen-ampliada" draggable="false">
+        </div>
+        <div class="instruccion-zoom">Usa la rueda para Zoom. Mantén presionado el clic para arrastrar. Presiona <b>ESC</b> para salir.</div>
+    </div>
+
+    <script defer>
+        let intervaloCarrete;
+        function iniciarCarrete(idCarrete, direccion) {
+            const carrete = document.getElementById(idCarrete);
+            clearInterval(intervaloCarrete);
+            intervaloCarrete = setInterval(() => {
+                carrete.scrollBy({ left: direccion * 15, behavior: 'auto' });
+            }, 16);
+        }
+        function detenerCarrete() {
+            clearInterval(intervaloCarrete);
+        }
+
+        function ocultarOverlay(videoElement) {
+            if(videoElement.nextElementSibling) {
+                videoElement.nextElementSibling.style.opacity = '0';
+            }
+        }
+        function mostrarOverlay(videoElement) {
+            if(videoElement.nextElementSibling) {
+                videoElement.nextElementSibling.style.opacity = '1';
+            }
+        }
+
+        function controlarSliderBA(inputRange) {
+            const container = inputRange.parentElement;
+            const valor = inputRange.value;
+            
+            container.style.setProperty('--pos', valor + '%');
+
+            const labelAntes = container.querySelector('.label-antes');
+            const labelDespues = container.querySelector('.label-despues');
+
+            if (valor < 45 || valor > 55) {
+                labelAntes.style.opacity = '0';
+                labelDespues.style.opacity = '0';
+            } else {
+                labelAntes.style.opacity = '1';
+                labelDespues.style.opacity = '1';
+            }
+        }
+
+        let indiceActualEdicion = 0;
+        const slidesEdicion = document.querySelectorAll('.slide-edicion');
+        function mostrarSlideEdicion(indice) {
+            slidesEdicion.forEach(slide => slide.classList.remove('activo'));
+            if (indice >= slidesEdicion.length) { indiceActualEdicion = 0; }
+            else if (indice < 0) { indiceActualEdicion = slidesEdicion.length - 1; }
+            else { indiceActualEdicion = indice; }
+            slidesEdicion[indiceActualEdicion].classList.add('activo');
+        }
+        function cambiarSlideEdicion(direccion) {
+            mostrarSlideEdicion(indiceActualEdicion + direccion);
+        }
+
+        const modal = document.getElementById("modal-foto");
+        const imgAmpliada = document.getElementById("imagen-ampliada");
+        let zoomLevel = 1;
+        let isDragging = false;
+        let startX, startY;
+        let translateX = 0, translateY = 0;
+
+        function aplicarTransformacion() {
+            // Se usa hardware acceleration con translate3d
+            imgAmpliada.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${zoomLevel})`;
+        }
+
+        function abrirImagen(src) {
+            modal.style.display = "flex";
+            imgAmpliada.src = src;
+            zoomLevel = 1; 
+            translateX = 0;
+            translateY = 0;
+            aplicarTransformacion();
+        }
+
+        function cerrarImagen() {
+            modal.style.display = "none";
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && modal.style.display === "flex") {
+                cerrarImagen();
+            }
+        });
+
+        imgAmpliada.addEventListener("wheel", function(e) {
+            e.preventDefault(); 
+            if (e.deltaY < 0) { zoomLevel += 0.2; } 
+            else { zoomLevel -= 0.2; }
+            zoomLevel = Math.min(Math.max(0.5, zoomLevel), 5); 
+            aplicarTransformacion();
+        });
+
+        imgAmpliada.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            imgAmpliada.style.cursor = "grabbing";
+            startX = e.clientX - translateX;
+            startY = e.clientY - translateY;
+        });
+
+        window.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            
+            // Usar requestAnimationFrame para optimizar el arrastre
+            window.requestAnimationFrame(aplicarTransformacion);
+        });
+
+        window.addEventListener("mouseup", () => {
+            isDragging = false;
+            imgAmpliada.style.cursor = "grab";
+        });
+
+        // Configuración óptima del Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('mostrar');
+                    observer.unobserve(entry.target); // Dejar de observar una vez animado
+                }
+            });
+        }, observerOptions);
+
+        const elementosOcultos = document.querySelectorAll('.animar-entrada');
+        elementosOcultos.forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
