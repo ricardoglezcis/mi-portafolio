@@ -58,7 +58,12 @@
                 <span class="skill"><img src="icono-lightroom.png" alt="Icono Lightroom" class="skill-icon">Lightroom</span>
                 <span class="skill"><img src="icono-threejs.png" alt="Icono THREE.js" class="skill-icon">THREE.js</span>
                 <span class="skill"><img src="icono-unity.png" alt="Icono Unity" class="skill-icon">Unity</span>
-    
+                <span class="skill"><img src="icono-processing.png" alt="Icono Processing" class="skill-icon">Processing</span>
+                <span class="skill"><img src="icono-premiere.png" alt="Icono Premiere" class="skill-icon">Premiere</span>
+                <span class="skill"><img src="icono-capcut.png" alt="Icono CapCut" class="skill-icon">CapCut</span>
+                <span class="skill"><img src="icono-filmora.png" alt="Icono Filmora" class="skill-icon">Filmora</span>
+                <span class="skill"><img src="icono-davinci.png" alt="Icono DaVinci" class="skill-icon">DaVinci Resolve</span>
+                <span class="skill"><img src="icono-snapseed.png" alt="Icono Snapseed" class="skill-icon">Snapseed</span>
             </div>
 
             <a href="#fotografia" class="btn">Ver mi trabajo</a>
@@ -76,6 +81,8 @@
         
         <div class="skills-tags centrado">
             <span class="skill"><img src="icono-lightroom.png" alt="Icono Lightroom" class="skill-icon">Lightroom</span>
+            <span class="skill"><img src="icono-photoshop.png" alt="Icono Photoshop" class="skill-icon">Photoshop</span>
+            <span class="skill"><img src="icono-snapseed.png" alt="Icono Snapseed" class="skill-icon">Snapseed</span>
         </div>
         
         <div class="contenedor-carrete-global">
@@ -107,7 +114,7 @@
             <h3>Edición de Imágenes | Corrección de Color</h3>
             <p class="sub-descripcion">
                 <br>La edición de fotografía es algo que me apasiona, mejorar la calidad de imagen y rescatar detalles perdidos a traves de las curvas de color es una de mis especialidades.
-                <br><br>Arrastra la barra central de izquierda a derecha para revelar la edición. Usa las flechas para ver más ejemplos.
+                <br><br>Arrastra la barra central de izquierda a derecha para revelar la edición.
             </p>
             
             <div class="carrusel-comparacion-edicion">
@@ -131,7 +138,7 @@
 
                         <div class="slide-edicion">
                             <div class="b-a-slider-container">
-                                <img src="despues2.JPG" alt="Después 2" class="b-a-antes" loading="lazy">
+                                <img src="despues2.jpg" alt="Después 2" class="b-a-antes" loading="lazy">
                                 <img src="antes2.jpg" alt="Antes 2" class="b-a-despues" loading="lazy">
                                 <div class="slider-linea"></div>
                                 <div class="slider-boton"></div>
@@ -143,7 +150,7 @@
 
                         <div class="slide-edicion">
                             <div class="b-a-slider-container">
-                                <img src="despues3.JPG" alt="Después 3" class="b-a-antes" loading="lazy">
+                                <img src="despues3.jpg" alt="Después 3" class="b-a-antes" loading="lazy">
                                 <img src="antes3.jpg" alt="Antes 3" class="b-a-despues" loading="lazy">
                                 <div class="slider-linea"></div>
                                 <div class="slider-boton"></div>
@@ -196,7 +203,6 @@
                 </div>
                 <div class="etiqueta-media">Muestra de Rigging en Modelo 3D elaborado en <span>Blender</span> | Animaciones hechas por Mixamo</div>
             </div>
-
             <div class="item-portfolio bento-pequeno">
                 <div class="contenedor-media img-click" onclick="abrirImagen(this.querySelector('img').src, this.querySelector('img').alt)">
                     <img src="modelado1.jpg" alt="Render de Objetos elaborado en 3dsMax" loading="lazy">
@@ -255,6 +261,7 @@
         <div class="skills-tags centrado">
             <span class="skill"><img src="icono-threejs.png" alt="Icono THREE.js" class="skill-icon">THREE.js</span>
             <span class="skill"><img src="icono-unity.png" alt="Icono Unity" class="skill-icon">Unity</span>
+            <span class="skill"><img src="icono-meta.png" alt="Icono Oculus" class="skill-icon">Oculus/Metaquest</span>
         </div>
         
         <div class="layout-zigzag">
@@ -296,7 +303,7 @@
             <div class="lista-contribuciones">
                 <a href="https://ricardoglezcis.github.io/GCRRMNVBGEOfrenda/" target="_blank" class="link-contribucion">🔗 Ofrenda "Por los que ya no están" (THREE.js) | Modelado y Programación</a>
                 <a href="https://lakb12.github.io/Recorrido-PointerLock-GCR-NRM/" target="_blank" class="link-contribucion">🔗 Recorrido Navideño PointerLock (THREE.js) | Modelado y Programación</a>
-                <a href="#" target="_blank" class="link-contribucion">🔗 Videojuego Proyecto Manhattan (Processing) | Co-creador</a>
+                <a href="https://ricardoglezcis.github.io/proyecto-manhatan/" target="_blank" class="link-contribucion">🔗 Videojuego Proyecto Manhattan (Processing) | Co-creador</a>
                 <a href="https://www.youtube.com/@DualDorks-ICM" target="_blank" class="link-contribucion">🔗 Youtube @DualDorks | Editor y Co-creador</a>
             </div>
         </div>
@@ -314,6 +321,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <footer id="contacto">
@@ -387,17 +395,27 @@
             }
         }
 
+        // --- SOLUCIÓN AL BUG DEL CARRUSEL ---
         let indiceActualEdicion = 0;
-        const slidesEdicion = document.querySelectorAll('.slide-edicion');
-        function mostrarSlideEdicion(indice) {
-            slidesEdicion.forEach(slide => slide.classList.remove('active'));
-            if (indice >= slidesEdicion.length) { indiceActualEdicion = 0; }
-            else if (indice < 0) { indiceActualEdicion = slidesEdicion.length - 1; }
-            else { indiceActualEdicion = indice; }
-            slidesEdicion[indiceActualEdicion].classList.add('activo');
-        }
         function cambiarSlideEdicion(direccion) {
-            mostrarSlideEdicion(indiceActualEdicion + direccion);
+            // Buscamos los elementos cada vez que se hace clic
+            const slides = document.querySelectorAll('.slide-edicion');
+            if (slides.length === 0) return; // Por seguridad
+
+            // Quitamos la clase a todos
+            slides.forEach(slide => slide.classList.remove('activo'));
+
+            // Calculamos la nueva foto
+            indiceActualEdicion += direccion;
+
+            if (indiceActualEdicion >= slides.length) { 
+                indiceActualEdicion = 0; 
+            } else if (indiceActualEdicion < 0) { 
+                indiceActualEdicion = slides.length - 1; 
+            }
+            
+            // Le ponemos la clase a la nueva foto
+            slides[indiceActualEdicion].classList.add('activo');
         }
 
         const modal = document.getElementById("modal-foto");
