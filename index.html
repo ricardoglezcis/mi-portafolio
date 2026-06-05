@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Portafolio profesional de Ricardo González Cisneros, Ingeniero en Comunicación Multimedia. Especialista en modelado 3D, fotografía, realidad virtual y desarrollo de entornos interactivos.">
+    
     <title>Portafolio | Ricardo González</title>
     <link rel="icon" type="image/png" href="dragon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,15 +14,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="marco-estetico">
+        <div class="linea-vertical izq"></div>
+        <div class="linea-vertical der"></div>
+        <div class="decoracion-esquina top-izq"></div>
+        <div class="decoracion-esquina top-der"></div>
+        <div class="decoracion-esquina bot-izq"></div>
+        <div class="decoracion-esquina bot-der"></div>
+    </div>
+
     <header>
         <nav>
             <div class="logo">Ricardo<span>&nbsp;González</span> Cisneros</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#fotografia">Fotografía</a></li>
-                <li><a href="#modelado-3d">Modelado 3D</a></li>
-                <li><a href="#vr">Realidad Virtual</a></li>
-                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            
+            <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+                <li><a href="#fotografia" onclick="toggleMenu()">Fotografía</a></li>
+                <li><a href="#modelado-3d" onclick="toggleMenu()">Modelado 3D</a></li>
+                <li><a href="#vr" onclick="toggleMenu()">Realidad Virtual</a></li>
+                <li><a href="#contacto" class="btn-nav" onclick="toggleMenu()">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -32,12 +51,14 @@
             <p class="titulo-skills">Las herramientas que manejo:</p>
             
             <div class="skills-tags">
-                <span class="skill">Maya</span>
-                <span class="skill">Blender</span>
-                <span class="skill">3ds Max</span>
-                <span class="skill">Zbrush</span>
-                <span class="skill">Lightroom</span>
-                <span class="skill">Unity</span>
+                <span class="skill"><img src="icono-maya.png" alt="Icono Maya" class="skill-icon">Maya</span>
+                <span class="skill"><img src="icono-blender.png" alt="Icono Blender" class="skill-icon">Blender</span>
+                <span class="skill"><img src="icono-3dsmax.png" alt="Icono 3ds Max" class="skill-icon">3ds Max</span>
+                <span class="skill"><img src="icono-zbrush.png" alt="Icono ZBrush" class="skill-icon">Zbrush</span>
+                <span class="skill"><img src="icono-lightroom.png" alt="Icono Lightroom" class="skill-icon">Lightroom</span>
+                <span class="skill"><img src="icono-threejs.png" alt="Icono THREE.js" class="skill-icon">THREE.js</span>
+                <span class="skill"><img src="icono-unity.png" alt="Icono Unity" class="skill-icon">Unity</span>
+
             </div>
 
             <a href="#fotografia" class="btn">Ver mi trabajo</a>
@@ -50,11 +71,11 @@
     <section id="fotografia" class="seccion-trabajo animar-entrada">
         <h2>Mi visión en <span>Fotografía</span></h2>
         <p class="descripcion-seccion">Explora un poco de mi portafolio fotográfico. Manejo exposición manual porque me otorga un mejor control sobre la foto y posteriormente para la edición.<br>
- <br>Por favor, pasa el cursor sobre las fotos para revelar su color<br>
+        <br>Por favor, pasa el cursor sobre las fotos para revelar su color<br>
         Deja presionado el clic en las flechas para navegar en el carrete de fotos, haz clic en las fotos para verlas a detalle o revisa mi trabajo de edición abajo.</p>
         
         <div class="skills-tags centrado">
-            <span class="skill">Lightroom</span>
+            <span class="skill"><img src="icono-lightroom.png" alt="Icono Lightroom" class="skill-icon">Lightroom</span>
         </div>
         
         <div class="contenedor-carrete-global">
@@ -63,19 +84,18 @@
                 ontouchstart="iniciarCarrete('mi-carrete', -1)" ontouchend="detenerCarrete()">&#10094;</button>
             
             <div class="carrete-fotografico" id="mi-carrete">
-                <!-- Cambia el texto en alt="" para cambiar el título que sale en pantalla completa -->
                 <img src="foto1.jpg" alt="Peces Koi - Parque Bicentenario | Presentada en Exposición fotográfica realizada en la UNEVE" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
                 <img src="foto2.jpg" alt="Fotografía de Steve - Deportivo de Villa | Presentada en Exposición fotográfica realizada en la UNEVE" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
                 <img src="foto3.jpg" alt="Fotografía de Monet | Presentada en Exposición fotográfica realizada en la UNEVE" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
                 <img src="foto4.jpg" alt="Retrato Urbano | Petición de sesión fotografica en el centro" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
                 <img src="foto5.jpg" alt="Emplatado de Snacks Italiano" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
                 <img src="foto6.jpg" alt="Atardecer" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
-                <img src="foto7.jpg" alt="Ojos sin Rostro - Bosque de Chapultepec " onclick="abrirImagen(this.src, this.alt)" loading="lazy">
+                <img src="foto7.jpg" alt="Ojos sin Rostro - Bosque de Chapultepec" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
                 <img src="foto8.jpg" alt="Conexiones - Museo de la Acuarela" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
                 <img src="foto9.jpg" alt="Cempasúchil - Paseo de la Reforma | Desfile de Muertos CDMX 2023" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
                 <img src="foto10.jpg" alt="Nadando solo - Desierto de los Leones" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
-				<img src="foto11.JPG" alt="Malteada de Oreo - Cafetería la Finca del Gato | Sesión Fotográfica para Publicidad en Página Web" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
-				<img src="foto12.JPG" alt="Frappe Capuchino - Cafetería la Finca del Gato | Sesión Fotográfica para Publicidad en Página Web" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
+                <img src="foto11.JPG" alt="Malteada de Oreo - Cafetería la Finca del Gato | Sesión Fotográfica para Publicidad en Página Web" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
+                <img src="foto12.JPG" alt="Frappe Capuchino - Cafetería la Finca del Gato | Sesión Fotográfica para Publicidad en Página Web" onclick="abrirImagen(this.src, this.alt)" loading="lazy">
             </div>
             
             <button class="flecha-carrete der" 
@@ -86,10 +106,9 @@
         <div class="comparacion-edicion animar-entrada">
             <h3>Edición de Imágenes | Corrección de Color</h3>
             <p class="sub-descripcion">
-				<br>La edición de fotografía es algo que me apasiona, mejorar la calidad de imagen y rescatar detalles perdidos a traves de las curvas de color es una de mis especialidades.
-<br>
-<br>
-Arrastra la barra central de izquierda a derecha para revelar la edición. Usa las flechas para ver más ejemplos.</p>
+                <br>La edición de fotografía es algo que me apasiona, mejorar la calidad de imagen y rescatar detalles perdidos a traves de las curvas de color es una de mis especialidades.
+                <br><br>Arrastra la barra central de izquierda a derecha para revelar la edición. Usa las flechas para ver más ejemplos.
+            </p>
             
             <div class="carrusel-comparacion-edicion">
                 <button class="flecha-carrusel izq-carrusel" onclick="cambiarSlideEdicion(-1)">&#10094;</button>
@@ -112,8 +131,8 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
 
                         <div class="slide-edicion">
                             <div class="b-a-slider-container">
-                                <img src="despues2.jpg" alt="Después 2" class="b-a-antes" loading="lazy">
-                                <img src="antes2.JPG" alt="Antes 2" class="b-a-despues" loading="lazy">
+                                <img src="despues2.JPG" alt="Después 2" class="b-a-antes" loading="lazy">
+                                <img src="antes2.jpg" alt="Antes 2" class="b-a-despues" loading="lazy">
                                 <div class="slider-linea"></div>
                                 <div class="slider-boton"></div>
                                 <input type="range" min="0" max="100" value="50" class="b-a-manejador" oninput="controlarSliderBA(this)">
@@ -124,8 +143,8 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
 
                         <div class="slide-edicion">
                             <div class="b-a-slider-container">
-                                <img src="despues3.jpg" alt="Después 3" class="b-a-antes" loading="lazy">
-                                <img src="antes3.JPG" alt="Antes 3" class="b-a-despues" loading="lazy">
+                                <img src="despues3.JPG" alt="Después 3" class="b-a-antes" loading="lazy">
+                                <img src="antes3.jpg" alt="Antes 3" class="b-a-despues" loading="lazy">
                                 <div class="slider-linea"></div>
                                 <div class="slider-boton"></div>
                                 <input type="range" min="0" max="100" value="50" class="b-a-manejador" oninput="controlarSliderBA(this)">
@@ -145,11 +164,11 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
         <p class="descripcion-seccion">Personajes orgánicos, objetos inorgánicos, animaciones, rigging y renders estáticos de alta calidad.</p>
         
         <div class="skills-tags centrado">
-            <span class="skill">Maya</span>
-            <span class="skill">Blender</span>
-            <span class="skill">3ds Max</span>
-            <span class="skill">ZBrush</span>
-            <span class="skill">THREE.js</span>
+            <span class="skill"><img src="icono-maya.png" alt="Icono Maya" class="skill-icon">Maya</span>
+            <span class="skill"><img src="icono-blender.png" alt="Icono Blender" class="skill-icon">Blender</span>
+            <span class="skill"><img src="icono-3dsmax.png" alt="Icono 3ds Max" class="skill-icon">3ds Max</span>
+            <span class="skill"><img src="icono-zbrush.png" alt="Icono ZBrush" class="skill-icon">ZBrush</span>
+            <span class="skill"><img src="icono-threejs.png" alt="Icono THREE.js" class="skill-icon">THREE.js</span>
         </div>
         
         <div class="bento-grid">
@@ -177,6 +196,7 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
                 </div>
                 <div class="etiqueta-media">Muestra de Rigging en Modelo 3D elaborado en <span>Blender</span> | Animaciones hechas por Mixamo</div>
             </div>
+
             <div class="item-portfolio bento-pequeno">
                 <div class="contenedor-media img-click" onclick="abrirImagen(this.querySelector('img').src, this.querySelector('img').alt)">
                     <img src="modelado1.jpg" alt="Render de Objetos elaborado en 3dsMax" loading="lazy">
@@ -233,9 +253,8 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
         <p class="descripcion-seccion">Recorridos interactivos y entornos inmersivos.</p>
         
         <div class="skills-tags centrado">
-            <span class="skill">THREE.js</span>
-            <span class="skill">Unity</span>
-            <span class="skill">Oculus/Metaquest</span>
+            <span class="skill"><img src="icono-threejs.png" alt="Icono THREE.js" class="skill-icon">THREE.js</span>
+            <span class="skill"><img src="icono-unity.png" alt="Icono Unity" class="skill-icon">Unity</span>
         </div>
         
         <div class="layout-zigzag">
@@ -277,9 +296,8 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
             <div class="lista-contribuciones">
                 <a href="https://ricardoglezcis.github.io/GCRRMNVBGEOfrenda/" target="_blank" class="link-contribucion">🔗 Ofrenda "Por los que ya no están" (THREE.js) | Modelado y Programación</a>
                 <a href="https://lakb12.github.io/Recorrido-PointerLock-GCR-NRM/" target="_blank" class="link-contribucion">🔗 Recorrido Navideño PointerLock (THREE.js) | Modelado y Programación</a>
-				<a href="https://ricardoglezcis.github.io/proyecto-manhatan/index.html" target="_blank" class="link-contribucion">🔗 Videojuego "Proyecto Manhattan"  | Modelado, Diseño y Programación</a>
+                <a href="#" target="_blank" class="link-contribucion">🔗 Videojuego Proyecto Manhattan (Processing) | Co-creador</a>
                 <a href="https://www.youtube.com/@DualDorks-ICM" target="_blank" class="link-contribucion">🔗 Youtube @DualDorks | Editor y Co-creador</a>
-				
             </div>
         </div>
 
@@ -296,19 +314,22 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
                 </div>
             </div>
         </div>
-
     </section>
 
     <footer id="contacto">
-        <h2>¿Listo para tu próximo proyecto?</h2>
-        <p>Trabajemos juntos para llevar tus ideas a la siguiente dimensión.</p>
-        
-        <ul class="lista-redes">
-            <li><a href="https://instagram.com/richardglezcis" target="_blank">Instagram: richardglezcis</a></li>
-            <li><a href="https://www.linkedin.com/in/ricardo-gonz%C3%A1lez-42a0ab299/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/ricardoglezcis" target="_blank">Github</a></li>
-            <li><a href="mailto:ricardo.gonzalez.0201@outlook.com" class="btn-correo">Enviar Correo</a></li>
-        </ul>
+        <div class="footer-contenido">
+            <div class="footer-izq">
+                <p>© 2026 Ricardo González Cisneros. Ing. en Comunicación Multimedia.</p>
+            </div>
+            <div class="footer-der">
+                <ul class="lista-redes-horizontal">
+                    <li><a href="https://instagram.com/richardglezcis" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/ricardo-gonz%C3%A1lez-42a0ab299/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.youtube.com/@richibang0201/videos" target="_blank">YouTube</a></li>
+                    <li><a href="mailto:ricardo.gonzalez.0201@outlook.com" class="btn-correo-footer">Enviar Correo</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
     <div id="modal-foto" class="modal">
@@ -316,12 +337,16 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
         <div class="modal-zoom-contenedor">
             <img class="modal-contenido" id="imagen-ampliada" draggable="false">
         </div>
-        <!-- NUEVO: Leyenda debajo de la foto -->
         <h3 id="leyenda-ampliada" class="leyenda-modal"></h3>
         <div class="instruccion-zoom">Usa la rueda para Zoom. Mantén presionado el clic para arrastrar. Presiona <b>ESC</b> para salir.</div>
     </div>
 
     <script defer>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+
         let intervaloCarrete;
         function iniciarCarrete(idCarrete, direccion) {
             const carrete = document.getElementById(idCarrete);
@@ -348,7 +373,6 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
         function controlarSliderBA(inputRange) {
             const container = inputRange.parentElement;
             const valor = inputRange.value;
-            
             container.style.setProperty('--pos', valor + '%');
 
             const labelAntes = container.querySelector('.label-antes');
@@ -366,7 +390,7 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
         let indiceActualEdicion = 0;
         const slidesEdicion = document.querySelectorAll('.slide-edicion');
         function mostrarSlideEdicion(indice) {
-            slidesEdicion.forEach(slide => slide.classList.remove('activo'));
+            slidesEdicion.forEach(slide => slide.classList.remove('active'));
             if (indice >= slidesEdicion.length) { indiceActualEdicion = 0; }
             else if (indice < 0) { indiceActualEdicion = slidesEdicion.length - 1; }
             else { indiceActualEdicion = indice; }
@@ -389,11 +413,10 @@ Arrastra la barra central de izquierda a derecha para revelar la edición. Usa l
             imgAmpliada.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${zoomLevel})`;
         }
 
-        // NUEVO: Ahora recibe el src y el texto alternativo para la leyenda
         function abrirImagen(src, altText) {
             modal.style.display = "flex";
             imgAmpliada.src = src;
-            leyendaAmpliada.innerText = altText || ''; // Asigna el título
+            leyendaAmpliada.innerText = altText || ''; 
             zoomLevel = 1; 
             translateX = 0;
             translateY = 0;
